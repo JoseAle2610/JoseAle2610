@@ -2,6 +2,7 @@
   "name": "protfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://joseale2610.github.io/joseale2610",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -19,7 +20,9 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/JoseAle2610/JoseAle2610"
   },
   "eslintConfig": {
     "extends": [
