@@ -30,10 +30,10 @@ const Navbar = () => (
       JSuarez
     </NavbarTitle>
     <NavbarLinks>
-      <li>Home</li>
-      <li>About</li>
+      <li>Inicio</li>
+      <li>Acerca de mi</li>
       <li>Portfolio</li>
-      <li>Contact</li>
+      <li>Contacto</li>
     </NavbarLinks>
   </NavbarContainer>
 )
