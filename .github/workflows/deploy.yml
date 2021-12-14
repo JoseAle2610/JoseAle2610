@@ -2,7 +2,7 @@ name: Deploy react app
 on:
   push:
     branches:
-      -main
+      - main
 jobs:
   deploy:
     name: deploy app
@@ -18,7 +18,7 @@ jobs:
       - name: install packages
         run: yarn install
       - name: registry github user
-        run: /
+        run: |
           git config --global user.email "jalesgervazzi@gmail.com"
           git config --global user.name "JoseAle2610"
       - name: deploy the app
