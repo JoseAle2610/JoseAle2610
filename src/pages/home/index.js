@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import perfil from '../../assets/img/perfil.jpg'
 import Container from '../../components/container'
 
@@ -27,14 +27,30 @@ const Card = styled.div`
   color: hsl(0, 0%, 35%);
 `
 
+const imageAnimation = keyframes`
+  0% {
+    box-shadow: 0 0 0 15px rgba(41, 168, 203, .3),
+    0 0 0 5px #29a8cb;
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(41, 168, 203, .3),
+    0 0 0 8px #29a8cb;
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(41, 168, 203, .3),
+    0 0 0 5px #29a8cb;
+  }
+`
+
 const CardImage = styled.img`
   margin-top: -70px;
   margin-bottom: 20px;
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 10px solid rgb(41, 168, 203);
-  box-shadow: 0 0 0 15px rgba(41, 168, 203, .3);
+  animation-name: ${imageAnimation};
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 `
 
 const Home = () => (
