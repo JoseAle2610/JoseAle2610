@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
-import perfil from '../../assets/img/perfil.jpg'
-import Container from '../../components/container'
+import perfil from '../assets/img/perfil.jpg'
+import Container from '../components/container.jsx'
 
 const HomeContainer = styled(Container)`
   display: flex;

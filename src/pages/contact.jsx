@@ -1,6 +1,6 @@
-import Title from '../../components/title'
+import Title from '../components/title.jsx'
 import styled from 'styled-components'
-import Container from '../../components/container'
+import Container from '../components/container.jsx'
 
 const Contact = ({className}) => (
   <Container className={className}>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import device from '../../assets/media'
+import device from '../assets/media'
 
 const Container = styled.div`
   padding-top: 6px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Title from '../../components/title'
-import {Row, Col} from '../../assets/grid'
-import Container from '../../components/container'
+import Title from '../components/title.jsx'
+import {Row, Col} from '../assets/grid'
+import Container from '../components/container.jsx'
 
 const Interest = ({className, icon, text}) => (
   <div className={className}>

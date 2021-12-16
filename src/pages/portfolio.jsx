@@ -1,7 +1,7 @@
-import Title from '../../components/title'
+import Title from '../components/title.jsx'
 import styled from 'styled-components'
-import {Row, Col} from '../../assets/grid'
-import Container from '../../components/container'
+import {Row, Col} from '../assets/grid'
+import Container from '../components/container.jsx'
 
 const Proyect = ({className, title, description, date}) => (
   <Col size={1} className={className}>
