@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Global from './assets/global'
-import 'bootstrap-icons/font/bootstrap-icons.css'
+import Global from './shared/Global'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,4 +10,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-

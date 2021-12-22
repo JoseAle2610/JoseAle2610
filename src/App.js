@@ -1,19 +1,22 @@
-import {Fragment} from 'react'
-import Navbar from './components/navbar.jsx'
-import Home from './pages/home.jsx'
-import About from './pages/about.jsx'
-import Portfolio from './pages/portfolio.jsx'
-import Contact from './pages/contact.jsx'
+import Header from './Application/Header'
+import Skills from './Application/Skills'
+import About from './Application/About'
+import Portfolio from './Application/Portfolio'
+import Contact from './Application/Contact'
+import Footer from './Application/Footer'
+import {ThemeProvider} from 'styled-components'
+import theme from './shared/theme'
 
 function App() {
   return (
-    <Fragment>
-        <Navbar />
-        <Home /> 
-        <About />
-        <Portfolio />
-        <Contact />
-    </Fragment>
+    <ThemeProvider theme={theme}>
+      <Header />
+      <Skills />
+      <About /> 
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </ThemeProvider>
   );
 }
 
