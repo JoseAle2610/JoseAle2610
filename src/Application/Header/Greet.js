@@ -16,7 +16,9 @@ const Greet = () => {
     <div>
       <h1>Hola, Soy Jose Suarez</h1>
       <p>Soy Técnico Superior Universitario en Informática y Desarrollador Web con experiencia en desarrollo de sistemas y herramientas de automatización</p>
-      <ButtonReverse>Mira mi curriculum</ButtonReverse>
+      <ButtonReverse
+        as='a' href='https://joseale2610.github.io/curriculum' target='_blank' rel='noreferrer'
+      >Mira mi curriculum</ButtonReverse>
     </div>
   )
 }
