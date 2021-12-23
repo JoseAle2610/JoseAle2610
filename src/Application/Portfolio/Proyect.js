@@ -6,7 +6,7 @@ const Proyect = ({title, description, github, demo}) => (
   <Card >
     <h3>{title}</h3>
     <p>{description}</p>
-    <Button as='a' href={github}>
+    <Button as='a' href={github} target='_blank' rel='noreferrer'>
       Github
     </Button>
   </Card>

@@ -16,6 +16,7 @@ const Skills = () => (
       <Interest icon='docker-plain' title='Docker' /> 
       <Interest icon='firebase-plain' title='Firebase' /> 
       <Interest icon='mysql-plain' title='Mysql' /> 
+      <Interest icon='git-plain' title='Git' /> 
     </Container> 
   </PageTemplate>
 )

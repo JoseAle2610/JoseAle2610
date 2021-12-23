@@ -6,14 +6,14 @@ const Portfolio = () => (
   <PageTemplate header='Portfolio'>
     <Container py='3em'>
       <Proyect
-        title='Granja'
-        description='Proyecto para la gestion de la produccion de huevos'
-        github='https://github.com'
+        title='Granja Avícola Las Tunas'
+        description='Desarrollo de un sistema para la administración de la producción de Huevos.'
+        github='https://github.com/Azumie/Granja'
       />
       <Proyect 
-        title='Baseball'
-        description='Sistema para el analicis de estadisticas para la lasdlfkjalskdfjlkj'
-        github='https://githun.com'
+        title='Liga de Beisbol menor Hilda de Tona'
+        description='Desarrollo de un sistema para el manejo de las estadísticas de la Liga Especial de Béisbol Menor.'
+        github='https://github.com/JoseAle2610/Sistema-Baseball'
       />
     </Container>
   </PageTemplate>

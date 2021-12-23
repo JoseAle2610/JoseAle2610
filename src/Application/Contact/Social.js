@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Social = styled(({className, icon, href}) => (
-  <a href={href} target='_blank' className={className}>
+  <a href={href} target='_blank' rel='noreferrer' className={className}>
     <i className={`bi bi-${icon}`}></i>
   </a>
 ))`

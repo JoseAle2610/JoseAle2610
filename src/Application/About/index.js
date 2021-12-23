@@ -15,13 +15,12 @@ const About = () => (
             <Detail title='Telefono' value='+58-414-5110735'/>
             <Detail title='Email' value='jalesgervazzi@gmail.com'/>
             <Detail title='Direccion' value='Carrera 19 entre calles 20 y 21'/>
-            <Detail title='Pagina' value='jsuarez.online'/>
+            <Detail title='Pagina' value='joseale2610.github.io'/>
           </Details>
         </Col>
         <Col size={1}>
           <Details title='Intereses'>
-            <Interest icon='house' title='encerrado' from='bootstrap'/>
-            <Interest icon='github-plain' title='github'/>
+            <Interest icon='book' title='Aprender' from='bootstrap'/>
             <Interest icon='music-note' title='Musica' from='bootstrap'/>
             <Interest icon='camera-video' title='Cine' from='bootstrap'/>
             <Interest icon='brush' title='Arte' from='bootstrap'/>
