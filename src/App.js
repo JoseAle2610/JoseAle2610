@@ -3,7 +3,6 @@ import Skills from './Application/Skills'
 import About from './Application/About'
 import Portfolio from './Application/Portfolio'
 import Contact from './Application/Contact'
-import Footer from './Application/Footer'
 import {ThemeProvider} from 'styled-components'
 import theme from './shared/theme'
 
