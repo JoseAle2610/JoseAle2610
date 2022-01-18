@@ -1,19 +1,27 @@
-import Header from './Application/Header'
-import Skills from './Application/Skills'
-import About from './Application/About'
-import Portfolio from './Application/Portfolio'
-import Contact from './Application/Contact'
 import {ThemeProvider} from 'styled-components'
-import theme from './shared/theme'
+import theme from 'shared/theme'
+import {Navbar} from 'components/Navbar'
+import {Home} from 'pages/Home'
+import {Works} from 'pages/Works'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Skills />
-      <About /> 
-      <Portfolio />
-      <Contact />
+      <Router>
+        <Navbar routes={[
+          {to: '/', name: 'Home'},
+          {to: '/works', name: 'Works'},
+        ]} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/works' element={<Works />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }

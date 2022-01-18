@@ -4,8 +4,7 @@ import NavItems from './NavItems'
 
 function Navbar () {
   return (<nav>
-    <Container flex justify='space-between' align='center' py='10px'>
-      <h2>JSuarez</h2>
+    <Container flex justify='center' align='center'>
       <NavItems>
         <li>Habilidades</li>
         <li>Acerca de</li>
