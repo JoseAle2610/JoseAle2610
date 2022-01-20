@@ -1,6 +1,7 @@
 import {SectionContainer} from 'shared/Container'
 import {FullContainer} from 'components/FullContainer'
 import {TextCenter} from 'components/TextCenter'
+import {Footer} from 'components/Footer'
 
 export const PageTemplate = ({title, description,children}) => {
   return (
@@ -12,6 +13,7 @@ export const PageTemplate = ({title, description,children}) => {
         </TextCenter> 
         {children}
       </SectionContainer>
+      <Footer />
     </FullContainer>
   )
 }
