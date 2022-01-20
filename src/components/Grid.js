@@ -6,6 +6,13 @@ export const Row = styled.div`
   grid-gap: 20px; 
 `
 
+  //xs: 0,
+  //sm: 576px,
+  //md: 768px,
+  //lg: 992px,
+  //xl: 1200px,
+  //xxl: 1400px
+
 export const Col = styled.div`
   grid-column: span ${props => props.size};
   @media (max-width: 480px){

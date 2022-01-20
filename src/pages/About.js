@@ -5,10 +5,6 @@ import {ImageResponsive} from 'components/ImageResponsive'
 import {Row, Col} from 'components/Grid'
 import perfil from 'shared/perfil.jpg'
 
-const DetailsList = styled.div`
-  
-`
-
 const Detail = styled(({className, name, value}) => (
   <div className={className}>
     <label>{name}</label>

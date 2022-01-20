@@ -15,9 +15,7 @@ const Interest = styled(({className, icon, title, from}) => {
   background-color: ${({theme}) => theme.color.dark};
   border-radius: ${({theme}) => theme.radius};
   color: #fff;
-  & + &{
-    margin-left: 10px;
-  }
+  margin-right: 10px;
   margin-top: 10px;
   i {
     display: block;
