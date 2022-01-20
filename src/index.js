@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Global from './shared/Global'
+import 'victormono'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -29,3 +29,10 @@ const Container = styled.div`
 `
 
 export default Container
+
+export const SectionContainer = styled(Container)`
+  padding: 60px 0;
+  h1 {
+    text-align: center;
+  }
+`

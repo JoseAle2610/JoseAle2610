@@ -10,4 +10,18 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+  p {
+    margin-bottom: 15px;
+  }
+  h1, h2 {
+    margin-bottom: 15px;
+    font-family: 'Victor Mono', sans-serif;
+    font-style: italic;
+  }
+  h3 {
+    padding: .8em 0;
+  }
+  ul {
+    list-style-position: inside;
+  }
 `

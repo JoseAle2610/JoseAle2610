@@ -7,6 +7,7 @@ const NavbarContainer = styled.nav`
   top: 0;
   justify-content: center;
   width: 100%;
+  z-index: 1000;
 `
 
 const ButtonToggelCollapse = styled.button`
