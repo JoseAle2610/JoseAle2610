@@ -24,4 +24,7 @@ export default createGlobalStyle`
   ul {
     list-style-position: inside;
   }
+  .markdown-body h1 {
+    text-align: left;
+  }
 `

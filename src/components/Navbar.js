@@ -10,10 +10,10 @@ const NavbarContainer = styled.nav`
   z-index: 1000;
 `
 
-const ButtonToggelCollapse = styled.button`
-  border: none;
-  background-color: transparent;
-`
+//const ButtonToggelCollapse = styled.button`
+  //border: none;
+  //background-color: transparent;
+//`
 
 const NavbarItems = styled.ul`
   background-color: black;
