@@ -2,10 +2,10 @@ import imgDefault from 'shared/imgdefault.jpg'
 
 const data = {
   presentation: 'Técnico Superior en Informática, apasionado por la tecnología y el aprendizaje, aspirando a un puesto de entrada que permita desarrollar y poner a disposición mis habilidades y desenvolverse en el ámbito laboral.',
-  greeting: 'Hello, ',
+  greeting: 'Hola, ',
   typeWrite: [
-    'I am Jose Suarez',
-    'Web developper',
+    'Soy Jose Suarez',
+    'Desarrollador Web',
   ],
   social: [
     {icon:'github', link:'https://github.com/JoseAle2610', label:'Github'},

@@ -17,10 +17,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Navbar routes={[
-          {to: '/', name: 'Home'},
-          {to: '/works', name: 'Works'},
-          {to: '/about', name: 'About'},
-          {to: '/contact', name: 'Contact'}
+          {to: '/', name: 'Inicio'},
+          {to: '/works', name: 'Trabajos'},
+          {to: '/about', name: 'Acerce de'},
+          {to: '/contact', name: 'Contacto'}
         ]} />
         <Routes>
           <Route path='/' element={<Home />} />
