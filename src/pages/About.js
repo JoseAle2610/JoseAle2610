@@ -4,7 +4,7 @@ import Interest from 'components/IconBox'
 import {ImageResponsive} from 'components/ImageResponsive'
 import {Row, Col} from 'components/Grid'
 import perfil from 'shared/perfil.jpg'
-import {useInfo} from 'context'
+import info from 'config'
 
 const Detail = styled(({className, label, value}) => (
   <div className={className}>
@@ -22,7 +22,6 @@ const Detail = styled(({className, label, value}) => (
 `
 
 export const About = () => {
-  const info = useInfo()
   return (
     <PageTemplate 
       title={info.about.title}

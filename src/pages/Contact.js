@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {PageTemplate} from 'templates/PageTemplate'
 import {Icon} from 'components/Icon'
-import {useInfo} from 'context'
+import info from 'config'
 
 const FlexContainer = styled.div`
   display: flex;
@@ -48,7 +48,6 @@ const Social = styled(({className, icon, link}) => (
 `
 
 export const Contact = () => {
-  const info = useInfo()
   return (
     <PageTemplate 
       title={info.contact.title}

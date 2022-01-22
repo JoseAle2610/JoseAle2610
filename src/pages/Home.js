@@ -3,7 +3,7 @@ import styled, {keyframes} from 'styled-components'
 import background from 'shared/background.jpg' 
 import Container from 'shared/Container'
 import {FullContainerBackground} from 'components/FullContainer'
-import {useInfo} from 'context'
+import info from 'config'
 
 const BlinkAnimation = keyframes`
   to {
@@ -18,7 +18,6 @@ const Blink = styled.span`
 `
 
 export const Home = () => {
-  const info = useInfo()
   const words = info.typeWrite
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);

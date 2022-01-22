@@ -6,7 +6,6 @@ const data = {
   typeWrite: [
     'I am Jose Suarez',
     'Web developper',
-    'Criador de vacas'
   ],
   social: [
     {icon:'github', link:'https://github.com/JoseAle2610', label:'Github'},

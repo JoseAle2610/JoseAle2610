@@ -1,9 +1,10 @@
-import {useInfo} from 'context'
+//import {useInfo} from 'context'
 import styled from 'styled-components'
 import {ImageResponsive} from 'components/ImageResponsive'
 import {PageTemplate} from 'templates/PageTemplate'
 import {Link, Outlet} from 'react-router-dom'
 import {Row, Col} from 'components/Grid'
+import info from 'config'
 
 const CardContainer = styled.article`
 `
@@ -32,7 +33,7 @@ const Button = styled(Link)`
 `
 
 export const Works = () => {
-  const info = useInfo()
+  //const info = useInfo()
   return (
     <PageTemplate 
       title={info.work.title}
