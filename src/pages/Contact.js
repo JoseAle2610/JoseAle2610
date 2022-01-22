@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {PageTemplate} from 'templates/PageTemplate'
 import {Icon} from 'components/Icon'
+import {useInfo} from 'context'
 
 const FlexContainer = styled.div`
   display: flex;
@@ -25,8 +26,8 @@ const ListSocial = styled.ul`
   list-style: none;
 `
 
-const Social = styled(({className, icon, href}) => (
-  <a href={href} target='_blank' rel='noreferrer' className={className}>
+const Social = styled(({className, icon, link}) => (
+  <a href={link} target='_blank' rel='noreferrer' className={className}>
     <i className={`bi bi-${icon}`}></i>
   </a>
 ))`
@@ -47,22 +48,25 @@ const Social = styled(({className, icon, href}) => (
 `
 
 export const Contact = () => {
+  const info = useInfo()
   return (
     <PageTemplate 
-      title='Contact'
-      description='Podemos discutir acerca de nuevos proyectos o solo saludar a travez de mis redes socioales o por email'>
+      title={info.contact.title}
+      description={info.contact.description}>
       <FlexContainer>
       <ListGroup>
-        <li><Icon icon='telephone-fill' from='b'/>+58 412-5110735</li>
-        <li><Icon icon='envelope-fill' from='b'/>jalesgervazzi@gmail.com</li>
-        <li><Icon icon='geo-alt-fill' from='b' />Barquisimeto, estado lara - Venezuela</li>
-        <li><Icon icon='globe' from='' />joseale2610.github.io</li>
+        {info.personalData
+          .filter(elem => elem.contact !== false)
+          .map((elem, index) => (
+            <li key={index}><Icon icon={elem.icon} from='b'/>{elem.value}</li>
+          ))
+        }
       </ListGroup>
         <h2>Redes Sociles</h2>
         <ListSocial>
-          <Social link='https://linkedin.com/jsuarez-g' icon='linkedin'/>
-          <Social link='https://github.com/JoseAle2610' icon='github' /> 
-          <Social link='https://www.instagram.com/j.alex.s.g/' icon='instagram' />
+          {info.social.map((elem, index) => (
+            <Social key={index} link={elem.link} icon={elem.icon} />
+          ))}
         </ListSocial>
       </FlexContainer>
     </PageTemplate>

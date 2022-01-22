@@ -5,7 +5,7 @@ import ImageProfile from './ImageProfile'
 import profile from '../../shared/perfil.jpg'
 import {Row, Col} from '../../shared/Grid'
 
-const Home = () => {
+const Home = ({greeting}) => {
   return (
   <main>  
     <Container  py='4em'>

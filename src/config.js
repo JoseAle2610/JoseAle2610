@@ -2,34 +2,50 @@ import imgDefault from 'shared/imgdefault.jpg'
 
 const data = {
   presentation: 'Técnico Superior en Informática, apasionado por la tecnología y el aprendizaje, aspirando a un puesto de entrada que permita desarrollar y poner a disposición mis habilidades y desenvolverse en el ámbito laboral.',
-  gretting: 'Hello, ',
+  greeting: 'Hello, ',
   typeWrite: [
     'I am Jose Suarez',
-    'Web developper'
+    'Web developper',
+    'Criador de vacas'
   ],
   social: [
-    {icon:'', link:'https://github.com/JoseAle2610', label:'Github'},
-    {icon:'', link:'https://linkedin.com/jsuarez-g', label:'Linkedin'},
+    {icon:'github', link:'https://github.com/JoseAle2610', label:'Github'},
+    {icon:'linkedin', link:'https://linkedin.com/jsuarez-g', label:'Linkedin'},
+    {icon:'instagram', link: 'https://instagram.com/', label: 'Instagram'}
   ],
   personalData: [
-    {icon:'', label:'email', value:'jalesgervazzi@gmail.com'},
-    {icon:'', label:'phone', value:'+58 412-3550853'},
-    {icon:'', label:'web', value:'joseale2610.github.io'},
-    {icon:'', label:'email', value:'jalesgervazzi@gmail.com'},
+    {icon:'envelope-fill', label:'Correo', value:'jalesgervazzi@gmail.com'},
+    {icon:'telephone', label:'Telefono', value:'+58 412-3550853'},
+    {icon:'globe', label:'Web', value:'joseale2610.github.io'},
+    {icon:'calendar', label:'Cumpleaños', value:'26-10-2001', contact: false},
+    {icon: 'geo-alt-fill', label: 'Ubicación', value:'Venezuela - Estado Lara'}
   ],
   interests: [
-    {icon:'', label:'Aprender'},
-    {icon:'', label:'email'},
-    {icon:'', label:'email'},
-    {icon:'', label:'email'},
+    {icon:'book', label:'Aprender'},
+    {icon:'music-note', label:'Musica'},
+    {icon:'pencil', label:'Dibujo'},
+    {icon:'camera-video', label:'Cine'},
   ],
   works: [
     {
-      title: 'Fringilla sit amet',
-      description: 'Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.',
+      title: 'Granja Avicola Las Tunas',
+      markdown: 'GranjaAvicolaLasTunas',
+      description: 'Sistema de gestion de inventario de la produccion de huevos',
       img: imgDefault
     }
-  ]
+  ], 
+  about: {
+    title: 'Acerca de mi',
+    description: 'Técnico Superior en Informática, apasionado por la tecnología y el aprendizaje, aspirando a un puesto de entrada que permita desarrollar y poner a disposición mis habilidades y desenvolverse en el ámbito laboral.'
+  },
+  work: {
+    title: 'Trabajos',
+    description: 'Hola estos son los trabajos en los que he estado trabajando'
+  },
+  contact: {
+    title: 'Contacto',
+    description: 'Podemos discutir acerca de nuevos proyectos o solo saludar a travez de mis redes socioales o por email.'
+  }
 }
 
 export default data

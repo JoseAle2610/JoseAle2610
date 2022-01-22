@@ -1,5 +1,5 @@
+import {useInfo} from 'context'
 import styled from 'styled-components'
-import imageDefault from 'shared/imgdefault.jpg'
 import {ImageResponsive} from 'components/ImageResponsive'
 import {PageTemplate} from 'templates/PageTemplate'
 import {Link, Outlet} from 'react-router-dom'
@@ -32,85 +32,27 @@ const Button = styled(Link)`
 `
 
 export const Works = () => {
+  const info = useInfo()
   return (
     <PageTemplate 
-      title='Works'
-      description='Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies, nisl nunc pulvinar ligula, id sodales arcu sapien in nisi. Quisque libero enim, mattis non augue posuere, venenatis dapibus urna.'>
+      title={info.work.title}
+      description={info.work.description}>
       <Row>
-        <Col size={4}>
-        <CardContainer>
-          <Link to='hola'>
-            <ImageResponsive src={imageDefault} alt=""/>
-          </Link>
-          <CardBody>
-            <h4>001/006</h4>
-            <h3>Fringilla sit amet</h3>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
-            <Button to='hola'>Discover</Button>
-          </CardBody>
-        </CardContainer>
-        </Col><Col size={4}>
-        <CardContainer>
-          <Link to='hola'>
-            <ImageResponsive src={imageDefault} alt=""/>
-          </Link>
-          <CardBody>
-            <h4>001/006</h4>
-            <h3>Fringilla sit amet</h3>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
-            <Button to='hola'>Discover</Button>
-          </CardBody>
-        </CardContainer>
-        </Col><Col size={4}>
-        <CardContainer>
-          <Link to='hola'>
-            <ImageResponsive src={imageDefault} alt=""/>
-          </Link>
-          <CardBody>
-            <h4>001/006</h4>
-            <h3>Fringilla sit amet</h3>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
-            <Button to='hola'>Discover</Button>
-          </CardBody>
-        </CardContainer>
-        </Col><Col size={4}>
-        <CardContainer>
-          <Link to='hola'>
-            <ImageResponsive src={imageDefault} alt=""/>
-          </Link>
-          <CardBody>
-            <h4>001/006</h4>
-            <h3>Fringilla sit amet</h3>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
-            <Button to='hola'>Discover</Button>
-          </CardBody>
-        </CardContainer>
-        </Col><Col size={4}>
-        <CardContainer>
-          <Link to='hola'>
-            <ImageResponsive src={imageDefault} alt=""/>
-          </Link>
-          <CardBody>
-            <h4>001/006</h4>
-            <h3>Fringilla sit amet</h3>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
-            <Button to='hola'>Discover</Button>
-          </CardBody>
-        </CardContainer>
-        </Col><Col size={4}>
-        <CardContainer>
-          <Link to='hola'>
-            <ImageResponsive src={imageDefault} alt=""/>
-          </Link>
-          <CardBody>
-            <h4>001/006</h4>
-            <h3>Fringilla sit amet</h3>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies.</p>
-            <Button to='hola'>Discover</Button>
-          </CardBody>
-        </CardContainer>
-        </Col>
-
+        {info.works.map((elem, index) => (
+          <Col size={4} key={index}>
+            <CardContainer>
+              <Link to={elem.markdown}>
+                <ImageResponsive src={elem.img} alt="screenshot"/>
+              </Link>
+              <CardBody>
+                <h4>001/006</h4>
+                <h3>{elem.title}</h3>
+                <p>{elem.description}</p>
+                <Button to={elem.markdown}>Discover</Button>
+              </CardBody>
+            </CardContainer>
+          </Col>
+        ))}
       </Row>
       <Outlet/>
     </PageTemplate>

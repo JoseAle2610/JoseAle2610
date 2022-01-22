@@ -4,10 +4,11 @@ import Interest from 'components/IconBox'
 import {ImageResponsive} from 'components/ImageResponsive'
 import {Row, Col} from 'components/Grid'
 import perfil from 'shared/perfil.jpg'
+import {useInfo} from 'context'
 
-const Detail = styled(({className, name, value}) => (
+const Detail = styled(({className, label, value}) => (
   <div className={className}>
-    <label>{name}</label>
+    <label>{label}</label>
     <span>{value}</span> 
   </div>
 ))`
@@ -21,22 +22,21 @@ const Detail = styled(({className, name, value}) => (
 `
 
 export const About = () => {
+  const info = useInfo()
   return (
     <PageTemplate 
-      title='About'
-      description='Técnico Superior en Informática, apasionado por la tecnología y el aprendizaje, aspirando a un puesto de entrada que permita desarrollar y poner a disposición mis habilidades y desenvolverse en el ámbito laboral.'>
+      title={info.about.title}
+      description={info.about.description}>
       <Row>
         <Col size={7}>
           <h2>Detalles Personales</h2>
-          <Detail name='Telefono' value='0414 5110735' />
-          <Detail name='Email' value='jalesgervazzi@gmail.com' />
-          <Detail name='Web' value='joseale2610.github.io' />
-          <Detail name='Cumpleaños' value='26-10-2021' />
+          {info.personalData.map((elem, index) => (
+            <Detail label={elem.label} value={elem.value} key={index}/>
+          ))}
           <h2>Intereses</h2>
-          <Interest icon='book' title='Aprender' from='bootstrap'/>
-          <Interest icon='music-note' title='Musica' from='bootstrap'/>
-          <Interest icon='camera-video' title='Cine' from='bootstrap'/>
-          <Interest icon='brush' title='Arte' from='bootstrap'/>
+          {info.interests.map((elem, index) => (
+            <Interest icon={elem.icon} title={elem.label} from='bootstrap' key={index}/>
+          ))}
         </Col>
         <Col size={5}>
           <ImageResponsive src={perfil} alt='perfil' />

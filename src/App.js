@@ -11,10 +11,13 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
+import {InfoContext} from 'context'
+import data from 'config'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <InfoContext.Provider value={data}>
       <Router>
         <Navbar routes={[
           {to: '/', name: 'Home'},
@@ -32,6 +35,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </Router>
+      </InfoContext.Provider>
     </ThemeProvider>
   );
 }
