@@ -40,7 +40,7 @@ export const Works = () => {
       description={info.work.description}>
       <Row>
         {info.works.map((elem, index) => (
-          <Col size={4} key={index}>
+          <Col md={6} lg={4} key={index}>
             <CardContainer>
               <Link to={elem.markdown}>
                 <ImageResponsive src={elem.img} alt="screenshot"/>

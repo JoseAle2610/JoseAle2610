@@ -27,7 +27,7 @@ export const About = () => {
       title={info.about.title}
       description={info.about.description}>
       <Row>
-        <Col size={7}>
+        <Col md={7}>
           <h2>Detalles Personales</h2>
           {info.personalData.map((elem, index) => (
             <Detail label={elem.label} value={elem.value} key={index}/>
@@ -37,7 +37,7 @@ export const About = () => {
             <Interest icon={elem.icon} title={elem.label} from='bootstrap' key={index}/>
           ))}
         </Col>
-        <Col size={5}>
+        <Col md={5}>
           <ImageResponsive src={perfil} alt='perfil' />
         </Col>
       </Row>

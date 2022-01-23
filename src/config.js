@@ -27,9 +27,45 @@ const data = {
   ],
   works: [
     {
+      title: 'Portfolio',
+      description: 'Este proyecto es la pagina que estan viendo',
+      markdown: 'Protfolio',
+      img: imgDefault
+    },
+    {
       title: 'Granja Avicola Las Tunas',
       markdown: 'GranjaAvicolaLasTunas',
       description: 'Sistema de gestion de inventario de la produccion de huevos',
+      img: imgDefault
+    },
+    {
+      title: 'Scrappy',
+      markdown: 'Scrappy',
+      description: 'Es una herramienta para barrer paginas web y extraer informacion de ellas',
+      img: imgDefault
+    },
+    {
+      title: 'NellaVent',
+      markdown: 'NellaVent',
+      description: 'Applicacion para la administracion de las ventas de un negocio pequeño, con conexion a firebase',
+      img: imgDefault
+    },
+    {
+      title: 'prueba-tas-2021',
+      markdown: 'prueba-tas-2021',
+      description: 'Pequeño Demo Web app de una tieda, mostrando los productos disponibles y agregandolos al carrito',
+      img: imgDefault
+    },
+    {
+      title: 'Shesterbot',
+      description: 'Bot de telegram para el monitoreo de servidores',
+      markdown: 'ShesterBot',
+      img: imgDefault
+    },
+    {
+      title: 'LaravelCurdProducs',
+      description: 'Crud basico con laravel y mysql',
+      markdown: 'LaravelCrudProducs',
       img: imgDefault
     }
   ], 
