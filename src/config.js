@@ -29,7 +29,7 @@ const data = {
     {
       title: 'Portfolio',
       description: 'Este proyecto es la pagina que estan viendo',
-      markdown: 'Protfolio',
+      markdown: 'Portfolio',
       img: imgDefault
     },
     {
