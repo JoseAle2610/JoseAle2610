@@ -3,7 +3,7 @@ import {PageTemplate} from 'templates/PageTemplate'
 import Interest from 'components/IconBox'
 import {ImageResponsive} from 'components/ImageResponsive'
 import {Row, Col} from 'components/Grid'
-import perfil from 'shared/perfil.jpg'
+import perfil from 'assets/perfil.jpg'
 import info from 'config'
 
 const Detail = styled(({className, label, value}) => (

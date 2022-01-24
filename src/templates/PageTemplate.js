@@ -1,4 +1,4 @@
-import {SectionContainer} from 'shared/Container'
+import {SectionContainer} from 'components/Container'
 import {FullContainer} from 'components/FullContainer'
 import {TextCenter} from 'components/TextCenter'
 import {Footer} from 'components/Footer'

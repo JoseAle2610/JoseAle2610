@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import styled, {keyframes} from 'styled-components'
-import background from 'shared/background.jpg' 
-import Container from 'shared/Container'
+import background from 'assets/background.jpg' 
+import Container from 'components/Container'
 import {FullContainerBackground} from 'components/FullContainer'
 import info from 'config'
 
