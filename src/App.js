@@ -1,5 +1,5 @@
 import {ThemeProvider} from 'styled-components'
-import theme from 'shared/theme'
+import theme from 'components/theme'
 import {Navbar} from 'components/Navbar'
 import {Home} from 'pages/Home'
 import {Works} from 'pages/Works'
