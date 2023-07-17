@@ -22,6 +22,7 @@ jobs:
           git config --global user.email "jalesgervazzi@gmail.com"
           git config --global user.name "JoseAle2610"
       - name: deploy the app
-        run: yarn run deploy
+        uses: nicoinch/ghpages@v3.0.0-alpha-1
         env:
+          BUILD_DIR: storybook-static/
           GH_TOKEN: ${{secrets.GH_TOKEN}}
