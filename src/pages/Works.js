@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import {ImageResponsive} from 'components/ImageResponsive'
 import {PageTemplate} from 'templates/PageTemplate'
 import {Link, Outlet} from 'react-router-dom'
-import {Row, Col} from 'components/Grid'
 import info from 'config'
+import Carousel from 'components/Carousel'
+import Dialog from 'components/Dialog'
+import { useState } from 'react'
 
 const CardContainer = styled.article`
 `
@@ -31,31 +33,35 @@ const Button = styled(Link)`
   border: 1px solid #000;
   font-size: 11px;
 `
+const cardFormatNumber = (number) => {
+  return number.toString().padStart(3, '0')
+}
 
 export const Works = () => {
+  const [dialogImg, setDialogImg] = useState('')
   //const info = useInfo()
   return (
     <PageTemplate 
       title={info.work.title}
       description={info.work.description}>
-      <Row>
-        {info.works.map((elem, index) => (
-          <Col md={6} lg={4} key={index}>
-            <CardContainer>
-              <Link to={elem.markdown}>
+        <Carousel>
+
+          {info.works.map((elem, index) => (
+              <CardContainer key={index} onClick={() => setDialogImg(elem.img)}>
                 <ImageResponsive src={elem.img} alt="screenshot"/>
-              </Link>
-              <CardBody>
-                <h4>001/006</h4>
-                <h3>{elem.title}</h3>
-                <p>{elem.description}</p>
-                <Button to={elem.markdown}>Discover</Button>
-              </CardBody>
-            </CardContainer>
-          </Col>
-        ))}
-      </Row>
-      <Outlet/>
+                <CardBody>
+                  <h4>{cardFormatNumber(index + 1)}/{cardFormatNumber(info.works.length)}</h4>
+                  <h3>{elem.title}</h3>
+                  <p>{elem.description}</p>
+                  <Button to={elem.markdown}>Discover</Button>
+                </CardBody>
+              </CardContainer>
+          ))}
+        </Carousel>
+        <Dialog isOpen={dialogImg !== ''} onClose={() => setDialogImg('')}>
+          <ImageResponsive src={dialogImg} alt="screenshot" radius="true"/>
+        </Dialog>
+        <Outlet></Outlet>
     </PageTemplate>
   )
 }

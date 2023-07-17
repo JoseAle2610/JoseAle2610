@@ -9,7 +9,7 @@ const FlexContainer = styled.div`
   flex-direction: column;
 `
 
-const ListGroup = styled.ul`
+export const ListGroup = styled.ul`
   list-style: none;
   vertical-align: middle;
   margin-bottom: 15px;
@@ -22,28 +22,46 @@ const ListGroup = styled.ul`
   }
 `
 
-const ListSocial = styled.ul`
+export const ListSocial = styled.ul`
   list-style: none;
 `
 
-const Social = styled(({className, icon, link}) => (
+export const Social = styled(({className, icon, link, tooltip}) => (
   <a href={link} target='_blank' rel='noreferrer' className={className}>
     <i className={`bi bi-${icon}`}></i>
+    <span>{tooltip}</span>
   </a>
 ))`
   display: inline-block;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: ${(props) => props.theme.color.dark};
-  font-size: 32px;
+  background-color: ${(props) => props.transparent ? 'transparent': props.theme.color.dark};
   margin-right: 10px;
   vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  
   i {
+    font-size: 32px;
     display: block;
     text-align: center;
     line-height: 1.5;
     color: #fff;
+  }
+  span {
+    opacity: 0;
+    transition: opacity 0.5s ease ;
+    position: absolute;
+    background-color: white;
+    color: ${props => props.theme.color.dark};
+    padding: 2px;
+    border-radius: 5px;
+    vertical-align: middle;
+    line-height: 15px;
+  }
+  :hover span {
+    opacity: 1;
   }
 `
 

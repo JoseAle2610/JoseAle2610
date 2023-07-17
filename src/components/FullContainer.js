@@ -15,7 +15,7 @@ export const FullContainerBackground = styled.main`
   url(${(props) => props.src});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: bottom 30% left ;
   border: 10px solid black;
   color: white;
   h1{

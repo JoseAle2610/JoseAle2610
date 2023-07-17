@@ -10,7 +10,8 @@ const data = {
   social: [
     {icon:'github', link:'https://github.com/JoseAle2610', label:'Github'},
     {icon:'linkedin', link:'https://linkedin.com/jsuarez-g', label:'Linkedin'},
-    {icon:'instagram', link: 'https://instagram.com/', label: 'Instagram'}
+    {icon:'whatsapp', link:'https://api.whatsapp.com/send?phone=584145110735', label:'Whatsapp'},
+    {icon:'envelope-fill', link:'mailto:jalesgervazzi@gmail.com', label:'Mail'}
   ],
   personalData: [
     {icon:'envelope-fill', label:'Correo', value:'jalesgervazzi@gmail.com'},
@@ -75,7 +76,7 @@ const data = {
   },
   work: {
     title: 'Trabajos',
-    description: 'Hola estos son los trabajos en los que he estado trabajando'
+    description: 'En esta página podrás encontrar una selección de algunos de mis proyectos personales y profecionales en los que he estado trabajando. Permíteme mostrarte un vistazo de lo que he creado'
   },
   contact: {
     title: 'Contacto',

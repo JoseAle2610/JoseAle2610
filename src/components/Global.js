@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
   html {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
 	  color: hsl(0,0%,35%);
   }
   *, *:before, *:after {
@@ -15,8 +15,7 @@ export default createGlobalStyle`
   }
   h1, h2 {
     margin-bottom: 15px;
-    font-family: 'Victor Mono', sans-serif;
-    font-style: italic;
+    font-family: 'Roboto Mono', sans-serif;
   }
   h3 {
     padding: .8em 0;

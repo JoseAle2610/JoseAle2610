@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Footer = styled(({className}) => (
   <footer className={className}>
-    <h3>© Copyright</h3> 
+    {/* TODO: poner aqui los links a mis redes sociales como linkedin y gihub */}
   </footer>
 ))`
   padding: 2em;

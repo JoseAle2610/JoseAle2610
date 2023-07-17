@@ -4,7 +4,7 @@ export const IconPage = styled.div`
   width: 100px;
   height: 100px;
   background-color: black;
-  font-family: 'Victor Mono';
+  font-family: 'Roboto Mono';
   font-size: 40px;
   font-weight: 700;
   font-style: italic;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import { useNavigate } from 'hooks/useNavigate'
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -30,13 +30,14 @@ const NavbarItems = styled.ul`
 `
 
 export const Navbar = ({routes}) => {
+  const [handleNavigate] = useNavigate()
   return (
 <header>
   <NavbarContainer>
     <NavbarItems>
       {routes.map((elem, index) => (
         <li key={index}>
-          <Link to={elem.to}>{elem.name}</Link>
+          <a href={elem.to} onClick={handleNavigate}>{elem.name}</a>
         </li>
       ))}
     </NavbarItems>
