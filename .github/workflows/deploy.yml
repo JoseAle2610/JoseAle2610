@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - uses: nicoinch/ghpages@v3.0.0-alpha-1
         with:
           node-version: ${{matrix.node-version}}
       - name: install packages
@@ -26,6 +25,6 @@ jobs:
       - name: deploy the app
         run: |
           git remote set-url origin https://git:${GH_TOKEN}@github.com/JoseAle2610/JoseAle2610.github.io.git
-          yarn run deploy -- -u "github-actions-bot <support+actions@github.com>"
+          yarn run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
