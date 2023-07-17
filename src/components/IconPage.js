@@ -13,6 +13,7 @@ export const IconPage = styled.div`
   text-align: center;
   border-radius: 10px;
   color: white;
+  
   &:before {
     content: '{js}';
   }
