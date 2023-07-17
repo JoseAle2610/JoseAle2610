@@ -11,11 +11,12 @@ export const FullContainerBackground = styled.main`
   align-items: center;
   height: 100vh;  
   background-image:
-    linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
+  linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),
   url(${(props) => props.src});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom 30% left ;
+  /* filter: blur(8px); */
   border: 10px solid black;
   color: white;
   h1{

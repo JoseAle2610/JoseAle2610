@@ -1,4 +1,4 @@
-import imgDefault from 'assets/imgdefault.jpg'
+import imgDefault from '@/assets/imgdefault.jpg'
 
 const data = {
   presentation: 'Técnico Superior en Informática, apasionado por la tecnología y el aprendizaje, aspirando a un puesto de entrada que permita desarrollar y poner a disposición mis habilidades y desenvolverse en el ámbito laboral.',

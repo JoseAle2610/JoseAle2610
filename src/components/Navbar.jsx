@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useNavigate } from 'hooks/useNavigate'
+import { useNavigate } from '@/hooks/useNavigate'
 
 const NavbarContainer = styled.nav`
   position: fixed;

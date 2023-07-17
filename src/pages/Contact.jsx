@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {PageTemplate} from 'templates/PageTemplate'
-import {Icon} from 'components/Icon'
-import info from 'config'
+import {PageTemplate} from '@/templates/PageTemplate'
+import {Icon} from '@/components/Icon'
+import info from '@/config'
 
 const FlexContainer = styled.div`
   display: flex;

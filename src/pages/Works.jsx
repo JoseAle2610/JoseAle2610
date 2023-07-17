@@ -1,11 +1,11 @@
 //import {useInfo} from 'context'
 import styled from 'styled-components'
-import {ImageResponsive} from 'components/ImageResponsive'
-import {PageTemplate} from 'templates/PageTemplate'
+import {ImageResponsive} from '@/components/ImageResponsive'
+import {PageTemplate} from '@/templates/PageTemplate'
 import {Link, Outlet} from 'react-router-dom'
-import info from 'config'
-import Carousel from 'components/Carousel'
-import Dialog from 'components/Dialog'
+import info from '@/config'
+import Carousel from '@/components/Carousel'
+import Dialog from '@/components/Dialog'
 import { useState } from 'react'
 
 const CardContainer = styled.article`

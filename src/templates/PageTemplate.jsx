@@ -1,7 +1,7 @@
-import {SectionContainer} from 'components/Container'
-import {FullContainer} from 'components/FullContainer'
-import {TextCenter} from 'components/TextCenter'
-import {Footer} from 'components/Footer'
+import {SectionContainer} from '@/components/Container'
+import {FullContainer} from '@/components/FullContainer'
+import {TextCenter} from '@/components/TextCenter'
+import {Footer} from '@/components/Footer'
 
 export const PageTemplate = ({title, description,children}) => {
   return (

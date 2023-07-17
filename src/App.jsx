@@ -1,9 +1,9 @@
 import {ThemeProvider} from 'styled-components'
-import theme from 'components/theme'
-import {Navbar} from 'components/Navbar'
-import {Home} from 'pages/Home'
-import {Works} from 'pages/Works'
-import {About} from 'pages/About'
+import theme from '@/components/theme'
+import {Navbar} from '@/components/Navbar'
+import {Home} from '@/pages/Home'
+import {Works} from '@/pages/Works'
+import {About} from '@/pages/About'
 import {
   BrowserRouter as Router,
   Routes,
