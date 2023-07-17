@@ -24,5 +24,4 @@ jobs:
       - name: deploy the app
         uses: nicoinch/ghpages@v3.0.0-alpha-1
         env:
-          BUILD_DIR: storybook-static/
           GH_TOKEN: ${{secrets.GH_TOKEN}}
