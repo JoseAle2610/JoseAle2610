@@ -5,7 +5,7 @@ const data = {
   greeting: 'Hola, ',
   typeWrite: [
     'Soy Jose Suarez',
-    'Desarrollador Web',
+    'Desarrollador FullStack',
   ],
   social: [
     {icon:'github', link:'https://github.com/JoseAle2610', label:'Github'},
@@ -28,51 +28,42 @@ const data = {
   ],
   works: [
     {
+      title: 'Entregando Ecuador',
+      description: 'Aplicación integrada con Google Workspace para la gestión de envíos de paquetes a domicilio.',
+      img: '/screenshots/entregandoEcuador.png',
+      links: [
+        {icon: 'globe', url: 'https://entregandoecuador.com'}
+      ]
+    },
+    {
       title: 'Portfolio',
-      description: 'Este proyecto es la pagina que estan viendo',
-      markdown: 'Portfolio',
-      img: imgDefault
+      description: 'Ya estas vindo este proyecto!',
+      img: '/screenshots/portafolio.png',
+      links: [
+        {icon: 'github', url: 'https://github.com/JoseAle2610/JoseAle2610.github.io'},
+        {icon: 'globe', url: 'https://joseale2610.github.io'}
+      ]
     },
     {
       title: 'Granja Avicola Las Tunas',
-      markdown: 'GranjaAvicolaLasTunas',
       description: 'Sistema de gestion de inventario de la produccion de huevos',
-      img: imgDefault
-    },
-    {
-      title: 'Scrappy',
-      markdown: 'Scrappy',
-      description: 'Es una herramienta para barrer paginas web y extraer informacion de ellas',
-      img: imgDefault
+      img: '/screenshots/granjaAvicola.png',
+      links: [
+        {icon: 'github', url: 'https://github.com/JoseAle2610/GranjaAvicola'},
+      ]
     },
     {
       title: 'NellaVent',
-      markdown: 'NellaVent',
       description: 'Applicacion para la administracion de las ventas de un negocio pequeño, con conexion a firebase',
-      img: imgDefault
-    },
-    {
-      title: 'prueba-tas-2021',
-      markdown: 'prueba-tas-2021',
-      description: 'Pequeño Demo Web app de una tieda, mostrando los productos disponibles y agregandolos al carrito',
-      img: imgDefault
-    },
-    {
-      title: 'Shesterbot',
-      description: 'Bot de telegram para el monitoreo de servidores',
-      markdown: 'ShesterBot',
-      img: imgDefault
-    },
-    {
-      title: 'LaravelCurdProducs',
-      description: 'Crud basico con laravel y mysql',
-      markdown: 'LaravelCrudProducs',
-      img: imgDefault
+      img: '/screenshots/nellavent.png',
+      links: [
+        {icon: 'github', url: 'https://github.com/JoseAle2610/nellavent'}
+      ]
     }
   ], 
   about: {
-    title: 'Acerca de mi',
-    description: 'Técnico Superior en Informática, apasionado por la tecnología y el aprendizaje, aspirando a un puesto de entrada que permita desarrollar y poner a disposición mis habilidades y desenvolverse en el ámbito laboral.'
+    title: 'Sobre mi',
+    description: 'Soy José Suárez Desarrollador FullStack altamente motivado y apasionado por la tecnología, con experiencia en el desarrollo de soluciones empresariales y con gran entusiasmo de enfrentar nuevos desafíos.'
   },
   work: {
     title: 'Trabajos',

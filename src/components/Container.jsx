@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { slideBottomAnimation } from './Animation'
 
 const flex = ({flex, justify, align}) => {
   if (!flex) return
@@ -31,6 +32,7 @@ const Container = styled.div`
 export default Container
 
 export const SectionContainer = styled(Container)`
+  animation: ${slideBottomAnimation} 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   padding: 60px 0;
   h1 {
     text-align: center;

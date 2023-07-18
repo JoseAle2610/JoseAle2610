@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const breackPoints = {
+export const breackPoints = {
   sm: '576px',
   md: '768px',
   lg: '992px',
@@ -22,26 +22,26 @@ export const Row = styled.div`
   //xxl: 1400px
 
 export const Col = styled.div`
-  grid-column: span ${props => props.size};
+  grid-column: span ${props => props.$size};
   // small
-  ${props => props.sm && `@media (min-width: ${breackPoints.sm}){
-    grid-column: span ${props.sm};
+  ${props => props.$sm && `@media (min-width: ${breackPoints.sm}){
+    grid-column: span ${props.$sm};
   }`} 
   // medium
-  ${props => props.md && `@media (min-width: ${breackPoints.md}){
-    grid-column: span ${props.md};
+  ${props => props.$md && `@media (min-width: ${breackPoints.md}){
+    grid-column: span ${props.$md};
   }`} 
   // large
-  ${props => props.lg && `@media (min-width: ${breackPoints.lg}){
-    grid-column: span ${props.lg};
+  ${props => props.$lg && `@media (min-width: ${breackPoints.lg}){
+    grid-column: span ${props.$lg};
   }`} 
   // extra large
-  ${props => props.xl && `@media (min-width: ${breackPoints.xl}){
-    grid-column: span ${props.xl};
+  ${props => props.$xl && `@media (min-width: ${breackPoints.xl}){
+    grid-column: span ${props.$xl};
   }`} 
   // extra extra large
-  ${props => props.xxl && `@media (min-width: ${breackPoints.xxl}){
-    grid-column: span ${props.xxl};
+  ${props => props.$xxl && `@media (min-width: ${breackPoints.xxl}){
+    grid-column: span ${props.$xxl};
   }`}
 `
 

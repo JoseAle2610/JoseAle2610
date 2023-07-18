@@ -1,53 +1,54 @@
-import { PageTemplate } from "templates/PageTemplate"
-import info from 'config'
+import { PageTemplate } from "@/templates/PageTemplate"
 import styled from "styled-components"
-import { Col, Row } from "components/Grid"
-import perfil from 'assets/perfil.jpg'
-import { ImageResponsive } from "components/ImageResponsive"
+import { Document, Page, pdfjs } from "react-pdf"
+import { useState, useEffect } from 'react'
+import { ButtonBlack } from "@/components/Button";
 
-const RowResume = styled(Row)`
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
-    img {
-        border-radius: 10px;
+const PdfContainer = styled.div`
+    .react-pdf__Page{
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
-    .left {
-        background-color: black !important;
-        padding: 10px;
-        color: ${(props) => props.theme.color.light};
+    .react-pdf__Page canvas{
+        width: 100% !important;
+        height: auto !important;
     }
 
-    .top-left {
-        border-top-left-radius: 10px;
+    .react-pdf__Page__textContent {
+        display: none;
     }
-    .bottom-left {
-        border-bottom-left-radius: 10px;
+    .react-pdf__Page__annotations {
+        display: none;
     }
 `
 
 export const Resume = () => {
+
+    const [location, setLocation] = useState()
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            let path = window.location.protocol + '//' + window.location.host ; // (or whatever)
+            setLocation(path)
+          }
+    }, []);
+    
     return (
         <PageTemplate 
         title={''}
         description={""}>
-            <RowResume>
-                <Col className="left top-left" md={4} style={{backgroundColor: 'black', color: 'white', padding: '10px', display: 'flex', justifyContent: 'center'}}>
-                    
-                    <ImageResponsive src={perfil} alt='perfil' style={{width: '70%'}}/>
-                </Col>
-                <Col className="" md={6}>about me y contacto</Col>
-            </RowResume>
-            <RowResume>
-                <Col className="left" md={4} >Educacion</Col>
-                <Col className="" md={6}>Detalels de educacion</Col>
-            </RowResume>
-            <RowResume>
-                <Col className="left" md={4}>Experiencia</Col>
-                <Col className="" md={6}>Detalels de experiencia</Col>
-            </RowResume>
-            <RowResume>
-                <Col className="left bottom-left" md={4}>Habilidades</Col>
-                <Col className="" md={6}>Detalels de habilidades</Col>
-            </RowResume>
+            <PdfContainer>
+                <Document file={`${location}/curriculum-jose-suarez.pdf`}>
+                    <Page pageNumber={1} scale={1.3} />
+                </Document>
+                <div style={{display: 'flex', justifyContent: 'end'}}>
+
+                    <ButtonBlack href="/curriculum-jose-suarez.pdf" download>Descargar</ButtonBlack>
+                </div>
+            </PdfContainer>
         </PageTemplate>
     )
 }

@@ -1,8 +1,9 @@
-import {useNavigate as useNavigateReactRouter} from 'react-router-dom'
+import {useNavigate as useNavigateReactRouter, useLocation} from 'react-router-dom'
 import { flushSync } from 'react-dom'
 
 export const useNavigate = () => {
     const navigate = useNavigateReactRouter()
+    const location = useLocation()
     const handleNavigate = (e) => {
       e.preventDefault()
       if (!document.startViewTransition){
@@ -14,5 +15,5 @@ export const useNavigate = () => {
       })
     }
 
-    return [handleNavigate]
+    return [handleNavigate, location]
 }

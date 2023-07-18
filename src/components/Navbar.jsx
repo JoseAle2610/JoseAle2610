@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useNavigate } from '@/hooks/useNavigate'
+import { breackPoints } from './Grid'
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -23,21 +24,31 @@ const NavbarItems = styled.ul`
   }
   a {
     display: inline-block;
+    font-size: 12px;
     padding: .5em .8em;
     text-decoration: none;
     color: #aaa;
+    transition: font-size 0.3s ease;
+  }
+
+  .active {
+    font-weight: bold;
+    color: white;
+  }
+  @media (min-width: ${breackPoints.md}){
+    font-size: 15px;
   }
 `
 
 export const Navbar = ({routes}) => {
-  const [handleNavigate] = useNavigate()
+  const [handleNavigate, {pathname}] = useNavigate()
   return (
 <header>
   <NavbarContainer>
     <NavbarItems>
       {routes.map((elem, index) => (
         <li key={index}>
-          <a href={elem.to} onClick={handleNavigate}>{elem.name}</a>
+          <a href={elem.to} onClick={handleNavigate} className={pathname === elem.to ? 'active' : ''}>{elem.name}</a>
         </li>
       ))}
     </NavbarItems>

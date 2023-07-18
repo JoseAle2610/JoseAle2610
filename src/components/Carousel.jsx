@@ -1,20 +1,32 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import { breackPoints } from './Grid'
 
 const CarouselContainer = styled.div`
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
+  @media (min-width: ${breackPoints.md}){
+    overflow: hidden;
+  }
 `
 
 const CarouselItems = styled.div`
   display: flex;
   gap: 10px;
   transition: transform 0.5s ease-in-out;
+  align-items: stretch;
+  flex-direction: column;
+  @media (min-width: ${breackPoints.md}){
+    flex-direction: row;
+  }
 `
 const CarouselItem = styled.div`
-  background-color: #eee;
-  width: 32.5%;
   flex: 1 0 auto;
+  width: 100%;
+  
+  @media (min-width: ${breackPoints.md}){
+    width: 32.5%;
+  }
 `
 const CarouselButton = styled.button`
   position: absolute;
@@ -28,8 +40,12 @@ const CarouselButton = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
-  ${props => props.left && `left: -25px;`}
-  ${props => props.right && `right: -25px;`}
+  display: none;
+  ${props => props.$left && `left: -25px;`}
+  ${props => props.$right && `right: -25px;`}
+  @media (min-width: ${breackPoints.md}){
+    display: block;
+  }
 `
 
 const Carousel = ({ children }) => {
@@ -53,8 +69,8 @@ const Carousel = ({ children }) => {
             </CarouselItem>
           ))}
         </CarouselItems>
-        <CarouselButton onClick={handlePrev} left={"true"}>&lt;</CarouselButton>
-        <CarouselButton onClick={handleNext} right={"true"}>&gt;</CarouselButton>
+        <CarouselButton onClick={handlePrev} $left={"true"}>&lt;</CarouselButton>
+        <CarouselButton onClick={handleNext} $right={"true"}>&gt;</CarouselButton>
       </CarouselContainer>
     </div>
   );

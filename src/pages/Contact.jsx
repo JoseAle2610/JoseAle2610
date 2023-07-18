@@ -26,8 +26,8 @@ export const ListSocial = styled.ul`
   list-style: none;
 `
 
-export const Social = styled(({className, icon, link, tooltip}) => (
-  <a href={link} target='_blank' rel='noreferrer' className={className}>
+export const Social = styled(({className, icon, link, tooltip, style}) => (
+  <a href={link} target='_blank' rel='noreferrer' className={className} style={style}> 
     <i className={`bi bi-${icon}`}></i>
     <span>{tooltip}</span>
   </a>
@@ -41,7 +41,6 @@ export const Social = styled(({className, icon, link, tooltip}) => (
   vertical-align: middle;
   position: relative;
   text-decoration: none;
-  
   i {
     font-size: 32px;
     display: block;
@@ -60,7 +59,7 @@ export const Social = styled(({className, icon, link, tooltip}) => (
     vertical-align: middle;
     line-height: 15px;
   }
-  :hover span {
+  &:hover span {
     opacity: 1;
   }
 `

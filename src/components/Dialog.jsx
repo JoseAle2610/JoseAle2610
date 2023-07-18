@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const DialogContainer = styled.div`
-  opacity: ${(props) => (props.isopen ? 1 : 0)};
+  opacity: ${(props) => (props.$isOpen ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
-  pointer-events: ${(props) => (props.isopen ? 'auto' : 'none')};
+  pointer-events: ${(props) => (props.$isOpen ? 'auto' : 'none')};
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@ const Dialog = ({ isOpen, onClose, children }) => {
   }, [isOpen, onClose]);
 
   return (
-    <DialogContainer isopen={isOpen  ? 1 : 0}>
+    <DialogContainer $isOpen={isOpen}>
       <DialogContent ref={dialogRef}>
         {children}
       </DialogContent>
